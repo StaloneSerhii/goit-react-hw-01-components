@@ -1,3 +1,5 @@
+import { NameStlye, Stats, ListStat, ProfileCard } from './Profile.style';
+
 export const Profile = ({
   items: {
     avatar,
@@ -8,29 +10,28 @@ export const Profile = ({
   },
 }) => {
   return (
-    <div>
+    <ProfileCard>
       <div>
-        <img src={avatar} alt="User avatar" />
-        <p>{username}</p>
-        <p>{tag}</p>
+        <img src={avatar} alt="User avatar" width="250px" />
+        <NameStlye>{username}</NameStlye>
+        <p>@{tag}</p>
         <p>{location}</p>
       </div>
-
-      <ul>
+      <ListStat>
         <li>
           <span>Followers:</span>
-          <span> {followers}</span>
+          <Stats> {followers}</Stats>
         </li>
         <li>
           <span>Views:</span>
-          <span> {views}</span>
+          <Stats> {views}</Stats>
         </li>
         <li>
           <span>Likes:</span>
-          <span> {likes}</span>
+          <Stats> {likes}</Stats>
         </li>
-      </ul>
-    </div>
+      </ListStat>
+    </ProfileCard>
   );
 };
 
