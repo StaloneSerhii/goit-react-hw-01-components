@@ -34,11 +34,3 @@ export const Profile = ({
     </ProfileCard>
   );
 };
-
-// Profile.propTypes = {
-//   items: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       location: PropTypes.string.isRe,
-//     })
-//   ),
-// };

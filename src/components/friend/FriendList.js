@@ -1,12 +1,12 @@
-import { FriendListItem } from './FriendListItem';
 import { FriendsList } from './Friend.style';
+import { FriendListItem } from './FriendListItem';
 
-export const FriendList = ({ items: friends }) => {
+export const FriendList = ({ items }) => {
   return (
     <div>
       <FriendsList>
-        {friends.map(friend => (
-          <FriendListItem items={friend} />
+        {items.map(friend => (
+          <FriendListItem items={friend} key={friend.id} />
         ))}
       </FriendsList>
     </div>
