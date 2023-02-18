@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { NameStlye, Stats, ListStat, ProfileCard } from './Profile.style';
 
 export const Profile = ({
@@ -33,4 +34,13 @@ export const Profile = ({
       </ListStat>
     </ProfileCard>
   );
+};
+
+Profile.propTypes = {
+  items: PropTypes.shape({
+    avatar: PropTypes.string.isRequired,
+    username: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+  }),
 };

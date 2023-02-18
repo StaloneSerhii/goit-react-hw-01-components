@@ -1,4 +1,5 @@
 import { Online } from './FriendListItem.style';
+import PropTypes from 'prop-types';
 
 export const FriendListItem = ({ items: { avatar, name, isOnline } }) => {
   return (
@@ -8,4 +9,12 @@ export const FriendListItem = ({ items: { avatar, name, isOnline } }) => {
       <Online status={isOnline ? 'isOnline' : 'offline'}>0</Online>
     </li>
   );
+};
+
+FriendListItem.propTypes = {
+  items: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    avatar: PropTypes.string.isRequired,
+    isOnline: PropTypes.bool.isRequired,
+  }),
 };

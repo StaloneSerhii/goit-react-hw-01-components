@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { StaticsStyle } from './Statistics.style';
 import { getRandomHexColor } from 'components/rando';
 
@@ -15,4 +16,14 @@ export const Statistics = ({ items }) => {
       </ul>
     </StaticsStyle>
   );
+};
+
+Statistics.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.exact({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ),
 };

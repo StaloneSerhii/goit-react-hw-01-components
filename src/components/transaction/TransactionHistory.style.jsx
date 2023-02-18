@@ -9,10 +9,10 @@ export const Transaction = styled.table`
   thead {
     border: 1px solid black;
     background-color: #00bcd5;
-    padding: 10px 96px;
+    padding: 10px 20px;
     tr {
       th {
-        padding-left: 10px;
+        padding-left: 63px;
       }
     }
   }
