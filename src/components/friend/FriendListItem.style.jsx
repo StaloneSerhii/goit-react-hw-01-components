@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { FriendListItem } from './FriendListItem';
 
 export const Online = styled.p`
   margin-left: 20px;
