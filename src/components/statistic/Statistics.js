@@ -2,10 +2,10 @@ import PropTypes from 'prop-types';
 import { StaticsStyle } from './Statistics.style';
 import { getRandomHexColor } from 'components/rando';
 
-export const Statistics = ({ items }) => {
+export const Statistics = ({ items, title }) => {
   return (
     <StaticsStyle>
-      <h2>Upload stats</h2>
+      {title && (<h2>{title}</h2>)}
       <ul>
         {items.map(data => (
           <li key={data.id} style={{ backgroundColor: getRandomHexColor() }}>
